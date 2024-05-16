@@ -53,7 +53,7 @@ footer {
 }
 
 .main-image {
-    flex: 3;
+    flex: 0;
     margin-right: 1rem;
 }
 
