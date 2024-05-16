@@ -30,6 +30,18 @@
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/54QoNuhyx7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
             <!--<a href="https://www.youtube.com/watch?v=54QoNuhyx7E">View on Youtube</a>-->
         </div>
+
+        <h2>Image Showcase</h2>
+                <div class="image-showcase">
+                    <div class="main-image">
+                        <img id="mainImage" src="images/Herald_PCG.png" alt="Main Image">
+                    </div>
+                    <div class="thumbnails">
+                        <img src="images/Herald_PCG.png" alt="Thumbnail 1" onclick="changeImage(this)">
+                        <img src="images/Herald_PCG_Castle.png" alt="Thumbnail 2" onclick="changeImage(this)">
+                        <!-- Add more thumbnails as needed -->
+                    </div>
+                </div>
         <!-- Add more projects as needed -->
     </section>
     <section id="contact">
@@ -39,5 +51,12 @@
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
+
+    <script>
+        function changeImage(element) {
+            document.getElementById('mainImage').src = element.src;
+        }
+    </script>
+
 </body>
 </html>

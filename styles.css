@@ -46,3 +46,43 @@ footer {
     position: relative;
     width: 100%;
 }
+
+.image-showcase {
+    display: flex;
+    align-items: center;
+}
+
+.main-image {
+    flex: 1;
+    margin-right: 1rem;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
