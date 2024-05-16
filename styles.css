@@ -49,11 +49,11 @@ footer {
 
 .image-showcase {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .main-image {
-    flex: 1;
+    flex: 3;
     margin-right: 1rem;
 }
 
@@ -68,6 +68,7 @@ footer {
 
 .thumbnails {
     display: flex;
+    flex: 1;
     flex-direction: column;
 }
 
