@@ -10,10 +10,11 @@
     <header>
         <h1>My Portfolio</h1>
         <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" aria-label="About Me">About Me</a></li>
+                <li><a href="#projects" aria-label="Projects">Projects</a></li>
+                <li><a href="#contact" aria-label="Contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -67,18 +68,42 @@
         <!-- Add more projects as needed -->
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at: <a href="mailto:shauntsx29@gmail.com">shauntsx29@gmail.com</a></p>
+        <h2>Contact Information</h2>
+        <h4>You can contact me via the following platforms</h4>
+        <div class="contact-info">
+            <p>
+                <img src="images/icons/1181190_email_mail_google_gmail.png" alt="Email Icon" class="contact-icon">
+                <a href="mailto:shauntsx29@gmail.com">shauntsx29@gmail.com</a>
+            </p>
+            <p>
+                <img src="images/icons/843786_whatsapp.png" alt="Whatsapp Icon" class="contact-icon">
+                <a href="tel:+6596214225">+65 96214225</a>
+            </p>
+            <p>
+                <img src="images/icons/104493_linkedin_linkedin.png" alt="LinkedIn Icon" class="contact-icon">
+                <a href="https://www.linkedin.com/in/shauntsx/" target="_blank">https://www.linkedin.com/in/shauntsx/</a>
+            </p>
+            <p>
+                <img src="images/icons/8666257_discord_icon.png" alt="Discord Icon" class="contact-icon">
+                <a href="https://discordapp.com/users/649706932373946397/1241293109300690956" target="_blank">xElire#1234</a>
+            </p>
+            <p>
+                <img src="images/icons/394187_rounded_github.png" alt="Discord Icon" class="contact-icon">
+                <a href="https://github.com/xElire" target="_blank">xElire</a>
+            </p>
+        </div>
     </section>
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
-
     <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav ul');
+            nav.classList.toggle('show');
+        }
         function changeImage(element, name) {
             document.getElementById(name).src = element.src;
         }
     </script>
-
 </body>
 </html>

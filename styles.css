@@ -15,19 +15,65 @@ header {
     text-align: center;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        padding: 1rem;
+        text-align: right;
+    }
+}
+
+@media (min-width: 769px) {
+    nav .menu-toggle {
+        display: none;
+    }
 }
 
 main {
@@ -58,7 +104,7 @@ footer {
 }
 
 .main-image img {
-    width: 560px;
+    width: 516px;
     height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -68,12 +114,13 @@ footer {
 
 .thumbnails {
     display: flex;
-    flex: 1;
     flex-direction: column;
+    align-items: flex-start; /* Align thumbnails to the start */
 }
 
 .thumbnails img {
-    width: 100px;
+    width: 100%;
+    max-width: 100px;
     height: auto;
     margin-bottom: 1rem;
     cursor: pointer;
@@ -86,4 +133,34 @@ footer {
 
 .thumbnails img:hover {
     transform: scale(1.1);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;  /* Adds space between each contact item */
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;  /* Adds space between icon and text */
+    margin: 0;  /* Remove any default margin */
+    padding: 0;  /* Remove any default padding */
+}
+
+.contact-icon {
+    width: 24px;  /* Set the size of the icon */
+    height: 24px;  /* Set the size of the icon */
+    margin: 0rem;  /* Remove any default margin */
+    padding: 0;  /* Remove any default padding */
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #002fff;  /* Set link color */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
