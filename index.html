@@ -28,18 +28,40 @@
             <p>A Low-Fidelity Prototype made as part of a Design Module. 
                 The prototype was designed and drawn using an iPad on the software called ibisPaintX </p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/54QoNuhyx7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
-            <!--<a href="https://www.youtube.com/watch?v=54QoNuhyx7E">View on Youtube</a>-->
-        </div>
-
-        <h3>Image Showcase</h3>
+            <!--<a href="https://www.figma.com/design/qfZNpUEmd5MeMYM79F5Ha7/DigoJudo_Project?node-id=0%3A1&t=JkgyqeNSjCX1OFdW-1">View on Youtube</a>-->
+            <h4>Image Showcase</h4>
                 <div class="image-showcase">
                     <div class="main-image">
-                        <img id="mainImage" src="images/Herald_PCG.png" alt="Main Image">
+                        <img id="tmsMainImage" src="images/TMS_Storyboard.png" alt="Main Image">
                     </div>
                     <div class="thumbnails">
-                        <img src="images/Herald_PCG.png" alt="Thumbnail 1" onclick="changeImage(this)">
-                        <img src="images/Herald_PCG_Castle.png" alt="Thumbnail 2" onclick="changeImage(this)">
+                        <img src="images/TMS_Storyboard.png" alt="Storyboard" onclick="changeImage(this, 'tmsMainImage')">
+                        <img src="images/TMS_Login.png" alt="Login Page" onclick="changeImage(this, 'tmsMainImage')">
+                        <img src="images/TMS_Homepage.png" alt="Home Page" onclick="changeImage(this, 'tmsMainImage')">
                         <!-- Add more thumbnails as needed -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>DigiJudo Mobile App Prototype</h3>
+                <p>This project involved creating a high-fidelity prototype for a mobile application as part of a design module. <br>
+                    The objective was to develop a user-centered prototype for DigiJudo, a judo club serving students, instructors, staff, and their children. <br>
+                    Our design team employed user research and iterative design methodologies to ensure the app met the needs of its diverse user base. <br>
+                    The final interactive prototype was crafted using Figma, highlighting our focus on usability, accessibility, and visual consistency.</p>
+                <a href="https://www.figma.com/design/qfZNpUEmd5MeMYM79F5Ha7/DigoJudo_Project?node-id=0%3A1&t=JkgyqeNSjCX1OFdW-1">View on Figma!</a>
+                <h4>Image Showcase</h4>
+                    <div class="image-showcase">
+                        <div class="main-image">
+                            <img id="djMainImage" src="images/DigiJudo_Login.png" alt="Main Image">
+                        </div>
+                        <div class="thumbnails">
+                            <img src="images/DigiJudo_Login.png" alt="Login" onclick="changeImage(this, 'djMainImage')">
+                            <img src="images/DigiJudo_Homepage.png" alt="Home" onclick="changeImage(this, 'djMainImage')">
+                            <img src="images/DigiJudo_Calendar.png" alt="Booking Sessions" onclick="changeImage(this, 'djMainImage')">
+                            <img src="images/DigiJudo_Bookings.png" alt="My Bookings" onclick="changeImage(this, 'djMainImage')">
+                            <!-- Add more thumbnails as needed -->
+                        </div>
                     </div>
                 </div>
         <!-- Add more projects as needed -->
@@ -53,8 +75,8 @@
     </footer>
 
     <script>
-        function changeImage(element) {
-            document.getElementById('mainImage').src = element.src;
+        function changeImage(element, name) {
+            document.getElementById(name).src = element.src;
         }
     </script>
 
