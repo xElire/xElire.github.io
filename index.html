@@ -19,13 +19,83 @@
         </nav>
     </header>
     <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! My Name's Shaun and Welcome to my portfolio! Here you'll find information about me and my work.</p>
+        <div class="banner-container">
+            <img src="images/banner-centre.png" alt="About Me Banner" class="banner">
+            <h2 class="banner-text">About Me</h2>
+        </div>
+        <div class="content-container">
+            <div class="content">
+                <h3>Introduction</h3>
+                <p>Hello! My name is Shaun Teo. I'm a passionate and inquisitive aspiring game developer with a strong background in game design and development. I thrive on being "On the Fly" and always strive to create products I can be proud of.</p>
+                <p>Currently, I am studying at DigiPen Institute of Technology Singapore, where I have had the opportunity to design and develop several games and even craft a game engine capable of handling both 2D and 3D graphics for various modules. As a product manager for my final capstone project, GAM300, I honed my leadership and project management skills.</p>
+            </div>
+        </div>
+        <div class="work-experience">
+            <h3>Work Experience</h3>
+            <div class="experience-item">
+                <div class="logo">
+                    <a href="https://www.linkedin.com/company/gamelogic-pte-ltd/" target="_blank">
+                        <img src="images/gamelogic-logo.jpg" alt="Gamelogic Logo">
+                    </a>
+                    <img src="images/icons/fwf.jpg" alt="Fwf Icon" class="skills-icon"> <br>
+                </div>
+                <div class="details">
+                    <h4>Programming Intern at Gamelogic Pte Ltd</h4>
+                    <p>
+                        As part of self improvement, during a free trimseter where I had no lessons, I decided that I would challenge myself to find a company where I could intern at to improve myself and broaden my knowledge on the development cycle of games. During my time at Gamelogic, 
+                        I got to learna plethora of stuff that was simply not taught in schoool especially not in the first year.</p>
+                    <p>
+                        During my time at Gamelogic, I was working on a game called Fishdom, an arcade fishing game where I helped implement UI and gameplay features according to the Designer's requirements as well as bug fixes spotted by the QA team.<br>
+                        Throughout my time, I began to pickup on a multitude of skills that ranged from a scripting language i was new to which was Lua, and furthermore I was also introduced to many Industry Standard tools, like Gitlab and the Atlasssian Softwares like Jira and Confluence.
+                        Daily scrums were common as well as Sprint Meetings every week which allowed me to furhter learn to workflow and how new features are implemented and managed. 
+                    </p>
+                    
+                    <p><img src="images/icons/9073878_c_sharp_icon.png" alt="C# Icon" class="skills-icon">
+                        <img src="images/icons/Lua-Logo.svg.png" alt="Lua Icon" class="skills-icon">
+                        <img src="images/icons/confluence-logo-D9B07137C2-seeklogo.com.png" alt="confluence Icon" class="skills-icon">
+                        <img src="images/icons/Jira_Logo.svg.png" alt="Jira Icon" class="skills-icon">     
+                        <img src="images/icons/Unity_2021.svg.png" alt="Unity Icon" class="skills-icon"></p>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="logo">
+                    <a href="https://www.linkedin.com/company/mitsuboshi-overseas-headquarters-private-limited/" target="_blank">
+                        <img src="images/mitsuboshi-logo.jpg" alt="Gamelogic Logo">
+                        </a>
+                </div>
+                <div class="details">
+                    <h4>Software Developer Intern at Mitsuboshi Overseas Headquarters</h4>
+                    <p>
+                        As part of my attachment to Mistuboshi Overseas Headquarters pte ltd, Me and 3 other interns worked as a closely knitted group to not only learn the processes that the workers go through 
+                        but to also help figure out ways to digitalize the material issuing process.
+                        <br>
+                        Throughout the internship, not only did get hands on experience with how the factory workers do their daily task, 
+                        we also got to experience the full work flow from receiveing materials and products, to issuing out materials and products for production and shipment respectively. As such, there were multiple projects developed during the period.
+                    </p>
+                    <p>
+                        One such project, which was also the main one that we were tasked to do was the Warehouse Material Issuing System, a system that was developed to ensure that materials were correctly issued based on the quanitity and lot number requested. 
+                        This was due to an incident that happened earlier where because of a small mix up between 2 similar ingredients, the company had suffered a significant loss and thus as interns it was our job to help them find out a way to prevent these incidents from recurring.
+                        <br>
+                        This project had also been nominated as a finalist in the
+                        <a href="https://siccawards.com.sg/hall-of-fame/2019-finalists/">2019 SICC Award for the Most Scalable Collaboration</a>
+                        <br> 
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/P8Fs2Tl2Icw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                    </p>
+
+                    <p>The projects were developed in C#, using SQLite for Data Storage as well as Excel for other functions like printing QR Codes and forms</p>
+                    <p><img src="images/icons/9073878_c_sharp_icon.png" alt="C# Icon" class="skills-icon"><img src="images/icons/SQLite370.svg.png" alt="Email Icon" class="skills-icon"><img src="images/icons/4202106_excel_logo_microsoft_ms_icon.png" alt="Email Icon" class="skills-icon"></p>
+                </div>
+            </div>
+        </div>
     </section>
+
     <section id="projects">
-        <h2>Projects</h2>
+        <div class="banner-container">
+            <img src="images/banner-centre.png" alt="Projects Banner" class="banner">
+            <h2 class="banner-text">My Projects</h2>
+        </div>
         <div class="project">
-            <h3>Talent Management System Website </h3>
+            <h2>Talent Management System Website </h2>
             <p>A Low-Fidelity Prototype made as part of a Design Module. 
                 The prototype was designed and drawn using an iPad on the software called ibisPaintX </p>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/54QoNuhyx7E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
@@ -45,7 +115,7 @@
             </div>
 
             <div class="project">
-                <h3>DigiJudo Mobile App Prototype</h3>
+                <h2>DigiJudo Mobile App Prototype</h2>
                 <p>This project involved creating a high-fidelity prototype for a mobile application as part of a design module. <br>
                     The objective was to develop a user-centered prototype for DigiJudo, a judo club serving students, instructors, staff, and their children. <br>
                     Our design team employed user research and iterative design methodologies to ensure the app met the needs of its diverse user base. <br>
@@ -65,10 +135,42 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="project">
+                    <h2>Stranded</h2>
+                    <p>
+                        This was a short 5-8 minute single player exploration game called stranded.<br>
+
+                        Stranded was made using Unity as part of a Design Module, DES214, while I was in Digipen Redmond. All assets used were free on the Unity Asset Store, and was scripted in C# <br>
+                        
+                        Stranded took a total of 4 weeks to make following the timeline below. <br>
+                        Week 1 : Map Layout <br>
+                        Week 2 : Grey Boxing<br>
+                        Week 3 : Adding in Guidance and Textures<br>
+                        Week 4 : Finalizing of Level<br>
+                    </p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vTS5LqliPO4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>   
+                    <h4>Image Showcase</h4>
+                        <div class="image-showcase">
+                            <div class="main-image">
+                                <img id="strandedMainImage" src="images/Stranded/Stranded_Title.png" alt="Main Image">
+                            </div>
+                            <div class="thumbnails">
+                                <img src="images/Stranded/Stranded_Title.png" alt="Main" onclick="changeImage(this, 'strandedMainImage')">
+                                <img src="images/Stranded/Stranded_Cave.png" alt="Home" onclick="changeImage(this, 'strandedMainImage')">
+                                <img src="images/Stranded/Stranded_Plane.png" alt="Plane" onclick="changeImage(this, 'strandedMainImage')">
+                                <img src="images/Stranded/Stranded_Map.png" alt="Map" onclick="changeImage(this, 'strandedMainImage')">
+                                <!-- Add more thumbnails as needed -->
+                            </div>
+                        </div>
+                    </div>
         <!-- Add more projects as needed -->
     </section>
     <section id="contact">
-        <h2>Contact Information</h2>
+        <div class="banner-container">
+            <img src="images/banner-centre.png" alt="Projects Banner" class="banner">
+            <h2 class="banner-text">Contact Informations</h2>
+        </div>
         <h4>You can contact me via the following platforms</h4>
         <div class="contact-info">
             <p>

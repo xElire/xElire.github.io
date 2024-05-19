@@ -108,7 +108,7 @@ footer {
     height: auto;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 5px;
+    padding: 5px; 
     background-color: white;
 }
 
@@ -135,6 +135,57 @@ footer {
     transform: scale(1.1);
 }
 
+.banner-container {
+    position: relative;
+
+    text-align: left;
+}
+
+.banner {
+    width: 100%;
+    max-width: 600px;  /* Adjust the max-width as needed */
+    margin: 0 auto;  /* Center the banner */
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;  /* Adjust the font size as needed */
+    font-weight: bold;
+    margin: 0;
+}
+
+
+.content-container, .work-experience {
+    margin-top: 2rem;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.experience-item .logo {
+    flex: 0 0 100px;
+    margin-right: 1rem;
+    display: block;
+}
+
+.experience-item .logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.experience-item .details {
+    flex: 1;
+}
+
+
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -154,6 +205,13 @@ footer {
     height: 24px;  /* Set the size of the icon */
     margin: 0rem;  /* Remove any default margin */
     padding: 0;  /* Remove any default padding */
+}
+
+.skills-icon {
+    width: auto;  /* Set the size of the icon */
+    height: 100px;  /* Set the size of the icon */
+    margin: 0rem;  /* Remove any default margin */
+    padding: 4px;  /* Remove any default padding */
 }
 
 .contact-info a {
