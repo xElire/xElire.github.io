@@ -3,8 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xElire's Portfolio</title>
+    <title>xElire's Portfolio - Game of Life</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        #game {
+            display: grid;
+            gap: 1px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+        }
+
+        .cell.alive {
+            background-color: #333;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .controls input {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .controls button {
+            margin-right: 10px;
+        }
+
+        header, footer {
+            text-align: center;
+            width: 100%;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,12 +72,108 @@
     </header>
     <main>
         <section>
-            <h2>Welcome to the New Page</h2>
-            <p>This is a new page on the site.</p>
+            <h2>Welcome to the Game of Life</h2>
+            <p>The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.<br>
+                 It is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input.</p>
+            <div class="controls">
+                <label for="rowsInput">Rows:</label>
+                <input type="number" id="rowsInput" value="50" min="1">
+                <label for="colsInput">Columns:</label>
+                <input type="number" id="colsInput" value="50" min="1">
+                <button onclick="resetGame()">Set Grid Size</button>
+            </div>
+            <div id="game"></div>
+            <button onclick="startGame()">Start</button>
+            <button onclick="stopGame()">Stop</button>
+            <button onclick="resetGame()">Reset</button>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 My Portfolio</p>
     </footer>
+    <script>
+        let grid;
+        let interval;
+
+        function createGrid(rows, cols) {
+            const grid = new Array(rows).fill(null).map(() => new Array(cols).fill(false));
+            return grid;
+        }
+
+        function drawGrid() {
+            const game = document.getElementById('game');
+            game.innerHTML = '';
+            const rows = grid.length;
+            const cols = grid[0].length;
+            game.style.gridTemplateColumns = `repeat(${cols}, 10px)`;
+            game.style.gridTemplateRows = `repeat(${rows}, 10px)`;
+            for (let row = 0; row < rows; row++) {
+                for (let col = 0; col < cols; col++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell' + (grid[row][col] ? ' alive' : '');
+                    cell.addEventListener('click', () => toggleCell(row, col));
+                    game.appendChild(cell);
+                }
+            }
+        }
+
+        function toggleCell(row, col) {
+            grid[row][col] = !grid[row][col];
+            drawGrid();
+        }
+
+        function updateGrid() {
+            const newGrid = createGrid(grid.length, grid[0].length);
+            for (let row = 0; row < grid.length; row++) {
+                for (let col = 0; col < grid[0].length; col++) {
+                    const aliveNeighbors = countAliveNeighbors(row, col);
+                    if (grid[row][col]) {
+                        newGrid[row][col] = aliveNeighbors === 2 || aliveNeighbors === 3;
+                    } else {
+                        newGrid[row][col] = aliveNeighbors === 3;
+                    }
+                }
+            }
+            grid = newGrid;
+            drawGrid();
+        }
+
+        function countAliveNeighbors(row, col) {
+            let count = 0;
+            for (let i = -1; i <= 1; i++) {
+                for (let j = -1; j <= 1; j++) {
+                    if (i === 0 && j === 0) continue;
+                    const newRow = row + i;
+                    const newCol = col + j;
+                    if (newRow >= 0 && newRow < grid.length && newCol >= 0 && newCol < grid[0].length && grid[newRow][newCol]) {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        function startGame() {
+            if (!interval) {
+                interval = setInterval(updateGrid, 100);
+            }
+        }
+
+        function stopGame() {
+            clearInterval(interval);
+            interval = null;
+        }
+
+        function resetGame() {
+            const rows = parseInt(document.getElementById('rowsInput').value);
+            const cols = parseInt(document.getElementById('colsInput').value);
+            grid = createGrid(rows, cols);
+            drawGrid();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            resetGame();
+        });
+    </script>
 </body>
 </html>
